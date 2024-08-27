@@ -59,7 +59,7 @@ const Header = () => {
                     : "animation-menu-slide-out"
                 }`}
               >
-                <ul className="bg-mainColor h-screen w-full font-Nunito font-bold text-base flex flex-col p-10">
+                <ul className="bg-mainColor h-screen w-full font-Nunito font-bold text-base flex flex-col py-6">
                   <HeaderLi
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}

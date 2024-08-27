@@ -24,9 +24,9 @@ const HeaderLi: React.FC<HeaderLiProps> = ({
           className={({ isActive }) =>
             isActive
               ? isMenuOpen
-                ? "bg-[#483F36] text-[#ffffff]  block w-full h-full px-6 py-6 menu-open" // estilo quando o menu hamburguer está aberto
+                ? "bg-[#483F36] text-[#ffffff]  block w-full h-full px-6 py-3" // estilo quando o menu hamburguer está aberto
                 : "border-b-2 py-6 text-[#181818] border-[#483F36]" // estilo quando o menu hamburguer está aberto
-              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-6`
+              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-3`
           }
         >
           HOME
@@ -37,19 +37,23 @@ const HeaderLi: React.FC<HeaderLiProps> = ({
           onMouseEnter={onMouseEnter}
           onClick={onClick}
           onMouseLeave={onMouseLeave}
-          className="relative inline-block"
+          className={`relative ${isMenuOpen ? "block" : "inline-block"} `}
         >
-          <button
-            className={`hover:bg-[#776a5bfb] active:bg-[#776a5bfb] hover:text-white py-6 px-2 ${
+          <div
+            className={`hover:bg-[#483F36] active:bg-[#483F36] hover:text-white cursor-pointer  ${
               isMenuOpen
-                ? "block  w-full h-full px-6 py-6"
-                : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-6`
+                ? "block w-full h-full px-4 py-3"
+                : `py-6 px-2 inline-block`
             }`}
           >
             CATEGORIAS ▾
-          </button>
+          </div>
           {isDropdownOpen && (
-            <ul className="absolute z-50 bg-mainColor text-center w-48 shadow-md">
+            <ul
+              className={`absolute z-50 bg-mainColor text-center ${
+                isMenuOpen ? "w-full" : "w-48"
+              } shadow-md`}
+            >
               <li className="m-0 hover:bg-[#776a5bfb] hover:text-white">
                 <Link to="categoria1" className="block w-full p-3">
                   Categoria 1
@@ -75,9 +79,9 @@ const HeaderLi: React.FC<HeaderLiProps> = ({
           className={({ isActive }) =>
             isActive
               ? isMenuOpen
-                ? "bg-[#483F36] text-[#ffffff] block w-full h-full px-6 py-6 menu-open"
+                ? "bg-[#483F36] text-[#ffffff] block w-full h-full px-6 py-3"
                 : "border-b-2 py-6 text-[#181818] border-[#483F36]"
-              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-6`
+              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-3`
           }
         >
           LIVROS GRATUITOS
@@ -89,9 +93,9 @@ const HeaderLi: React.FC<HeaderLiProps> = ({
           className={({ isActive }) =>
             isActive
               ? isMenuOpen
-                ? "bg-[#483F36] text-[#ffffff] block w-full h-full px-6 py-6 menu-open"
+                ? "bg-[#483F36] text-[#ffffff] block w-full h-full px-6 py-3"
                 : "border-b-2 py-6 text-[#181818] border-[#483F36]"
-              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-6`
+              : `block w-full h-full ${isMenuOpen ? "px-4" : ""}  py-3`
           }
         >
           LIVROS PAGOS
