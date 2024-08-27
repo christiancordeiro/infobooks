@@ -4,6 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Menu animation */
+.animation-menu-slide-in {
+  animation: anime-menu-slide-in 0.4s ease-in-out;
+}
+
+@keyframes anime-menu-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animation-menu-slide-out {
+  animation: anime-menu-slide-out 0.4s ease-in-out;
+}
+
+@keyframes anime-menu-slide-out {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 /* Home / Animações Livro */
 .card-animation {
   animation: Cardanimation 4s ease-in;
