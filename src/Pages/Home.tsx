@@ -1,8 +1,8 @@
 import { useFetchData } from "../useFetch"
 import { Volume } from "../Tipagens"
 import { useEffect, useState } from "react"
-import Input from "./Input"
-import Feed from "./Feed"
+import Input from "../Components/Input"
+import Feed from "../Components/Feed"
 
 const Home = () => {
   const [valueInput, setValueInput] = useState<string>("")

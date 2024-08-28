@@ -3,7 +3,7 @@ import logo from "../assets/infobooks.svg"
 import { Link } from "react-router-dom"
 import { useMediaQuery } from "react-responsive"
 import MenuHamburguer from "../assets/menu-hamburguer.svg"
-import HeaderLi from "./Header/HeaderLi"
+import HeaderLi from "../Components/Header/HeaderLi"
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)

@@ -1,8 +1,8 @@
-import Header from "./Components/Header"
+import Header from "./Pages/Header"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./Components/Home"
-import LivrosGratuitos from "./Components/LivrosGratuitos"
-import LivrosPagos from "./Components/LivrosPagos"
+import Home from "./Pages/Home"
+import LivrosGratuitos from "./Pages/LivrosGratuitos"
+import LivrosPagos from "./Pages/LivrosPagos"
 
 function App() {
   return (
