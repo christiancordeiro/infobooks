@@ -6,7 +6,7 @@ import Input from "../Components/Input"
 
 const LivrosPagos = () => {
   const [valueInput, setValueInput] = useState<string>("")
-  const [query, setQuery] = useState<string>("romance")
+  const [query, setQuery] = useState<string>("ficção")
 
   const { data, loading } = useFetchData<{ items: Volume[] }>(
     `volumes?q=${query}&filter=paid-ebooks`
